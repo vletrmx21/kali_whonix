@@ -246,3 +246,7 @@ Example:
 ----------
 Now your machine is ready.
 Reboot it and work.
+
+Ignore fake TCP-packets with RST flags:
+
+    iptables -I INPUT -p tcp --tcp-flags RST RST -j DROP
